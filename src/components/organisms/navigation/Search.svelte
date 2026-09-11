@@ -8,6 +8,18 @@ import { onDestroy, onMount } from "svelte";
 
 import type { SearchResult } from "@/global";
 
+declare global {
+	interface Window {
+		pagefind?: {
+			search: (keyword: string) => Promise<{
+				results: Array<{
+					data: () => Promise<SearchResult>;
+				}>;
+			}>;
+		};
+	}
+}
+
 let keywordDesktop = $state("");
 let keywordMobile = $state("");
 let result: SearchResult[] = $state([]);
@@ -122,12 +134,18 @@ const search = async (keyword: string, isDesktop: boolean): Promise<void> => {
 	}
 	try {
 		let searchResults: SearchResult[] = [];
-		if (import.meta.env.PROD && pagefindLoaded && window.pagefind) {
+		const isProduction = Boolean(
+			(import.meta as ImportMeta & { env?: { PROD?: boolean } }).env?.PROD,
+		);
+		const isDevelopment = Boolean(
+			(import.meta as ImportMeta & { env?: { DEV?: boolean } }).env?.DEV,
+		);
+		if (isProduction && pagefindLoaded && window.pagefind) {
 			const response = await window.pagefind.search(keyword);
 			searchResults = await Promise.all(
 				response.results.map((item) => item.data()),
 			);
-		} else if (import.meta.env.DEV) {
+		} else if (isDevelopment) {
 			searchResults = fakeResult;
 		} else {
 			searchResults = [];
@@ -276,7 +294,7 @@ onDestroy(() => {
 				: ''}"
 		></Icon>
 		<input
-			id="search-input-desktop"
+			id="search"
 			placeholder={i18n(I18nKey.search)}
 			bind:value={keywordDesktop}
 			onfocus={() => {
