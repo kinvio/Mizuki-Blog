@@ -37,9 +37,9 @@ export const siteConfig: SiteConfig = {
 		// 顶栏标题文本
 		text: "Kinvio",
 		// 顶栏标题图标路径，默认使用 public/assets/home/home.webp
-		icon: "assets/home/ChatGPT-Logo.png",
+		icon: "assets/home/ChatGPT-Logo.webp",
 		// 网站Logo图片路径
-		logo: "assets/home/ChatGPT-D.png",
+		logo: "assets/home/ChatGPT-D.webp",
 	},
 
 	// 旧版页面自动缩放配置。默认关闭，页面尺寸优先交由响应式布局处理。
@@ -205,7 +205,7 @@ export const siteConfig: SiteConfig = {
 	favicon: [
 		// 留空以使用默认 favicon
 		 {
-		   src: '/favicon/enderlily2.png',    // 图标文件路径
+		   src: '/favicon/enderlily2.ico',    // 图标文件路径
 		   theme: 'light',              // 可选，指定主题 'light' | 'dark'
 		   sizes: '16x16'             // 可选，图标大小
 		 }
