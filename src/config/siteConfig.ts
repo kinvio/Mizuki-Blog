@@ -37,9 +37,9 @@ export const siteConfig: SiteConfig = {
 		// 顶栏标题文本
 		text: "Kinvio",
 		// 顶栏标题图标路径，默认使用 public/assets/home/home.webp
-		icon: "assets/home/ChatGPT Logo.png",
+		icon: "assets/home/ChatGPT D.png",
 		// 网站Logo图片路径
-		logo: "assets/home/ChatGPT D.png",
+		logo: "assets/home/ChatGPT Logo.png",
 	},
 
 	// 旧版页面自动缩放配置。默认关闭，页面尺寸优先交由响应式布局处理。
