@@ -8,18 +8,6 @@ import { onDestroy, onMount } from "svelte";
 
 import type { SearchResult } from "@/global";
 
-declare global {
-	interface Window {
-		pagefind?: {
-			search: (keyword: string) => Promise<{
-				results: Array<{
-					data: () => Promise<SearchResult>;
-				}>;
-			}>;
-		};
-	}
-}
-
 let keywordDesktop = $state("");
 let keywordMobile = $state("");
 let result: SearchResult[] = $state([]);
@@ -134,18 +122,12 @@ const search = async (keyword: string, isDesktop: boolean): Promise<void> => {
 	}
 	try {
 		let searchResults: SearchResult[] = [];
-		const isProduction = Boolean(
-			(import.meta as ImportMeta & { env?: { PROD?: boolean } }).env?.PROD,
-		);
-		const isDevelopment = Boolean(
-			(import.meta as ImportMeta & { env?: { DEV?: boolean } }).env?.DEV,
-		);
-		if (isProduction && pagefindLoaded && window.pagefind) {
+		if (import.meta.env.PROD && pagefindLoaded && window.pagefind) {
 			const response = await window.pagefind.search(keyword);
 			searchResults = await Promise.all(
 				response.results.map((item) => item.data()),
 			);
-		} else if (isDevelopment) {
+		} else if (import.meta.env.DEV) {
 			searchResults = fakeResult;
 		} else {
 			searchResults = [];
