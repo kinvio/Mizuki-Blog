@@ -37,9 +37,9 @@ export const siteConfig: SiteConfig = {
 		// 顶栏标题文本
 		text: "Kinvio",
 		// 顶栏标题图标路径，默认使用 public/assets/home/home.webp
-		icon: "assets/home/ChatGPT D.png",
+		icon: "assets/home/ChatGPT Logo.png",
 		// 网站Logo图片路径
-		logo: "assets/home/ChatGPT Logo.png",
+		logo: "assets/home/ChatGPT D.png",
 	},
 
 	// 旧版页面自动缩放配置。默认关闭，页面尺寸优先交由响应式布局处理。
@@ -204,11 +204,11 @@ export const siteConfig: SiteConfig = {
 	generateOgImages: false, // 启用生成OpenGraph图片功能,注意开启后要渲染很长时间，不建议本地调试的时候开启
 	favicon: [
 		// 留空以使用默认 favicon
-		// {
-		//   src: '/favicon/icon.png',    // 图标文件路径
-		//   theme: 'light',              // 可选，指定主题 'light' | 'dark'
-		//   sizes: '32x32',              // 可选，图标大小
-		// }
+		 {
+		   src: '/favicon/enderlily2.png',    // 图标文件路径
+		   theme: 'light',              // 可选，指定主题 'light' | 'dark'
+		   sizes: '16x16',              // 可选，图标大小
+		 }
 	],
 
 	showLastModified: true, // 控制"上次编辑"卡片显示的开关
