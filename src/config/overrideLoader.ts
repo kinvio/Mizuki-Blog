@@ -34,7 +34,14 @@ const OVERRIDABLE_CONFIGS = [
 
 export type OverridableConfigName = (typeof OVERRIDABLE_CONFIGS)[number];
 
-const overrideModules = import.meta.glob<{ default?: unknown }>(
+const overrideModules = (
+	import.meta as ImportMeta & {
+		glob: <T>(
+			pattern: string,
+			options: { eager: boolean },
+		) => Record<string, T>;
+	}
+).glob<{ default?: unknown }>(
 	"./overrides/*.ts",
 	{ eager: true },
 );

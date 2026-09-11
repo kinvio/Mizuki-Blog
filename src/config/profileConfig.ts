@@ -26,9 +26,9 @@ export const profileConfig: ProfileConfig = {
 			url: "https://github.com/Kinvio",
 		},
 		{
-			name: "Codeberg",
-			icon: "simple-icons:codeberg",
-			url: "https://codeberg.org",
+			name: "QQ",
+			icon: "simple-icons:qq",
+			url: "https://user.qzone.qq.com/3437579970",
 		},
 		{
 			name: "Discord",
