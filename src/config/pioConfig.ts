@@ -17,6 +17,16 @@ export const pioConfig: PioConfig = {
 			"Stop touching me!",
 			"HENTAI!",
 			"Don't bully me like that!",
+			"Baka! (￣^￣)",
+            " Noo~ Stop it, you dummy!",
+            "Hmph! I'm not talking to you!",
+            "Pervert! (●′ω`●)",
+            "Waaa! You're so mean! >_<",
+            "Mou~ I hate you! (A little bit...)",
+            "Don't pinch me! It hurts! QAQ",
+            "Hey! My cheeks are not toys!",
+            "Nyaa~ Bad person! (╯‵□′)╯︵┻━┻",
+            "You're so annoying... but pat me more."
 		], // 触摸提示
 		home: "Click here to go back to homepage!", // 首页提示
 		skin: ["Want to see my new outfit?", "The new outfit looks great~"], // 换装提示
