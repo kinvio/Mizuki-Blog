@@ -129,10 +129,10 @@ export const siteConfig: SiteConfig = {
 				"/assets/desktop-banner/gpt4.png",
 			], // 桌面横幅图片
 			mobile: [
-				"/assets/mobile-banner/1.webp",
-				"/assets/mobile-banner/2.webp",
-				"/assets/mobile-banner/3.webp",
-				"/assets/mobile-banner/4.webp",
+				"/assets/mobile-banner/ll.png",
+				"/assets/mobile-banner/第七期(冰冻鱼粽)预览版.png",
+				"/assets/mobile-banner/gpt1.png",
+				"/assets/mobile-banner/gpt4.png",
 			], // 移动横幅图片
 		}, // 使用本地横幅图片
 
