@@ -127,8 +127,6 @@ export const siteConfig: SiteConfig = {
 				"/assets/desktop-banner/第七期(冰冻鱼粽)预览版.png",
 				"/assets/desktop-banner/gpt1.png",
 				"/assets/desktop-banner/gpt4.png",
-				"/assets/mobile-banner/第十三期莉莉预览版3冰冻鱼粽.png",
-				"/assets/mobile-banner/冰冻鱼粽子14期.png",
 			], // 桌面横幅图片
 			mobile: [
 				"/assets/mobile-banner/QQ1.png",
